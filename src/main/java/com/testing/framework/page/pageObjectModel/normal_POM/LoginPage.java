@@ -5,6 +5,7 @@ import com.testing.framework.utils.WaitHelpers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static com.testing.framework.driver.DriverManager.getDriver;
 import static com.testing.framework.utils.WaitHelpers.waitJVM;
 
 public class LoginPage {
@@ -26,17 +27,26 @@ public class LoginPage {
     //Step 2: Page Actions
     public String loginToVWOLoginInvalidCreds(String user, String pwd) {
         driver.get(PropertiesReader.readKey("url"));
-        driver.findElement(username).sendKeys("user");
-        driver.findElement(password).sendKeys("password");
+        driver.findElement(username).sendKeys(user);
+        driver.findElement(password).sendKeys(pwd);
         driver.findElement(signButton).click();
 
         //waitJVM(5000);
 
         //OR
-        WaitHelpers.checkVisibility(driver, error_message);
+        WaitHelpers.checkVisibility(driver, error_message, 3);
 
         String error_msg_text = driver.findElement(error_message).getText();
         return error_msg_text;
+    }
+
+    public void loginToVWOValidLoginCreds(String user, String pwd) {
+        driver.get(PropertiesReader.readKey("url"));
+        driver.findElement(username).sendKeys(user);
+        driver.findElement(password).sendKeys(pwd);
+        driver.findElement(signButton).click();
+
+        waitJVM(5000);
 
     }
 

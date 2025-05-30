@@ -12,7 +12,7 @@ public class PropertiesReader {
         Properties p = null;
 
         try {
-            FileInputStream fileInputStream = new FileInputStream(System.getProperty("user.dir") + "src/main/resources/data.properties");
+            FileInputStream fileInputStream = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/data.properties");
             p = new Properties();
             try {
                 p.load(fileInputStream);

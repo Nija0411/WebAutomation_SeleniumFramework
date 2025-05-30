@@ -24,6 +24,8 @@ public class DriverManager {
     //When we want to start the driver
     public static void init() {
         String browser = PropertiesReader.readKey("browser");
+        browser = browser.toLowerCase();
+
         switch (browser) {
             case "edge":
                 EdgeOptions edgeOptions = new EdgeOptions();
@@ -46,10 +48,10 @@ public class DriverManager {
         }
     }
 
-    public static void down(){
-        if(getDriver()!=null){
+    public static void down() {
+        if (getDriver() != null) {
             driver.quit();
-            driver=null;
+            driver = null;
         }
     }
 
