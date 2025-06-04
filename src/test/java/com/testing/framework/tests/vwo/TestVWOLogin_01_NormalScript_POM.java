@@ -2,8 +2,8 @@ package com.testing.framework.tests.vwo;
 
 import com.testing.framework.base.CommonToAllTest;
 import com.testing.framework.driver.DriverManager;
-import com.testing.framework.page.pageObjectModel.normal_POM.DashBoardPage;
-import com.testing.framework.page.pageObjectModel.normal_POM.LoginPage;
+import com.testing.framework.page.pageObjectModel.normal_POM.vwo.DashBoardPage;
+import com.testing.framework.page.pageObjectModel.normal_POM.vwo.LoginPage;
 import com.testing.framework.utils.PropertiesReader;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;

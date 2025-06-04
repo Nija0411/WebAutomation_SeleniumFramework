@@ -1,11 +1,10 @@
-package com.testing.framework.page.pageObjectModel.normal_POM;
+package com.testing.framework.page.pageObjectModel.normal_POM.vwo;
 
 import com.testing.framework.utils.PropertiesReader;
 import com.testing.framework.utils.WaitHelpers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static com.testing.framework.driver.DriverManager.getDriver;
 import static com.testing.framework.utils.WaitHelpers.waitJVM;
 
 public class LoginPage {

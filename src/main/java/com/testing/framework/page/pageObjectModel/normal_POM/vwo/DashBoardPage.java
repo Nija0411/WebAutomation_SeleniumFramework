@@ -1,4 +1,4 @@
-package com.testing.framework.page.pageObjectModel.normal_POM;
+package com.testing.framework.page.pageObjectModel.normal_POM.vwo;
 
 import com.testing.framework.utils.WaitHelpers;
 import org.openqa.selenium.By;
